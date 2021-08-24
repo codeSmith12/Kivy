@@ -1,0 +1,57 @@
+#:kivy 1.0.9
+
+<TestScreen>:
+
+    Label:
+        text: "Items"
+        font_size: 44
+        center_x: root.center_x
+        center_y: root.height-20
+    Button:
+        text: "+"
+        font_size: 44
+        width: 50
+        height: 50
+        # Instead of function give it constructor of a custom widgetheight: 50
+        on_press: root.newItemWidget()
+        x: root.width - self.width
+        y: root.height - self.height
+    ScrollView:
+        id: "itemListScroll"
+        size_hint_y: .73
+        pos_hint: {'x':0, 'y':.11}
+        do_scroll_x: False
+        do_scroll_y: True
+        width: root.width-40
+        height:root.height-20
+        center_x: self.width/2
+        center_y: root.height * 2 / 4 - 10
+        GridLayout:
+            size:(root.width, root.height)
+            size_hint_x: None
+            size_hint_y: None
+            cols:1
+            height: self.minimum_height
+
+            Button:
+                text:"Hello World"
+            Button:
+                text:"Herrooo 2"
+
+
+<NewItem>:
+    Label:
+        text: "Name"
+    TextInput:
+        multiline: False
+        hint: ""
+    Label:
+        text: "Cost"
+    TextInput:
+        multiline: False
+        hint: ""
+    Label:
+        text: "Who"
+    TextInput:
+        multiline: True
+        hint: ""

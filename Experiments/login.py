@@ -13,7 +13,7 @@ class SplitItScreen(GridLayout):
         self.row_force_default=True
         self.row_default_height=40
 
-        
+
 
         self.add_widget(Label(text='Items'))# Add the label
         self.newItemName = TextInput(multiline=False)

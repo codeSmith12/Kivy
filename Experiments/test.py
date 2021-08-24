@@ -4,6 +4,7 @@ from kivy.uix.label import Label
 from kivy.uix.scrollview import ScrollView
 from kivy.core.window import Window
 from kivy.uix.textinput import TextInput
+from kivy.uix.button import Button
 from kivy.properties import (
     NumericProperty, ReferenceListProperty, ObjectProperty
 )
@@ -28,6 +29,7 @@ class NewItem(GridLayout):
         super(NewItem, self).__init__(**kwargs)
         self.cols = 2
         self.name = ""
+        self.btn = Button(text="Hello")
         self.cost = 0
         self.who = []
 

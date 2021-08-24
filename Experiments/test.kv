@@ -22,10 +22,10 @@
         pos_hint: {'x':0, 'y':.11}
         do_scroll_x: False
         do_scroll_y: True
-        width: root.width-40
+        width: root.width-45
         height:root.height-20
-        center_x: self.width/2
-        center_y: root.height * 2 / 4 - 10
+        center_x: self.width/2 - 5
+        center_y: root.height * 2 / 4 - 40
         GridLayout:
             size:(root.width, root.height)
             size_hint_x: None
@@ -33,25 +33,43 @@
             cols:1
             height: self.minimum_height
 
-            Button:
-                text:"Hello World"
-            Button:
-                text:"Herrooo 2"
+            NewItem
+            NewItem
+            NewItem
+            NewItem
+            NewItem
+            NewItem
+            NewItem
+            NewItem
+            NewItem
+            NewItem
+            NewItem
+            NewItem
+            NewItem
+            NewItem
 
 
-<NewItem>:
+
+<NewItem@GridLayout>:
+    cols: 2
     Label:
+        id:"ItemName"
         text: "Name"
     TextInput:
+        id:"ItemNameValue"
         multiline: False
         hint: ""
     Label:
+        id:"ItemCost"
         text: "Cost"
     TextInput:
+        id:"ItemCostValue"
         multiline: False
         hint: ""
     Label:
+        id:"ItemWho"
         text: "Who"
     TextInput:
+        id:"ItemWhoValue"
         multiline: True
         hint: ""
